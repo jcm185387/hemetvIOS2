@@ -1,0 +1,6 @@
+framework module Pods_heme_tv_heme_tvUITests {
+  umbrella header "Pods-heme.tv-heme.tvUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

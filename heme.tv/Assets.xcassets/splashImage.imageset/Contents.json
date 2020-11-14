@@ -1,0 +1,31 @@
+{
+  "images" : [
+    {
+      "alignment-insets" : {
+        "bottom" : 0,
+        "left" : -1,
+        "right" : 0,
+        "top" : 0
+      },
+      "filename" : "inicio_hemtv.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "auto-scaling" : "auto",
+    "preserves-vector-representation" : true
+  }
+}

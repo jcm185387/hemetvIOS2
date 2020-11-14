@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>604678739159-rqmrahpc11l47pt11h7paltff3gtgseb.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.604678739159-rqmrahpc11l47pt11h7paltff3gtgseb</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDNvUH1DUKwQb0x9u2PZtRMAmImIQL_Rv0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>604678739159</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>hemetelevision.heme-tv</string>
+	<key>PROJECT_ID</key>
+	<string>hemetv-44a68</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hemetv-44a68.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:604678739159:ios:dd1cdbfd0ff22acd9b8c92</string>
+	<key>DATABASE_URL</key>
+	<string>https://hemetv-44a68.firebaseio.com</string>
+</dict>
+</plist>
