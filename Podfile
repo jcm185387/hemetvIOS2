@@ -6,14 +6,17 @@ target 'heme.tv' do
   use_frameworks!
 
   pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
 
   target 'heme.tvTests' do
     inherit! :search_paths
     pod 'Firebase/Analytics'
+    pod 'Firebase/Auth'
   end
 
   target 'heme.tvUITests' do
     pod 'Firebase/Analytics'
+    pod 'Firebase/Auth'
   end
 
 end
