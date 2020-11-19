@@ -7,9 +7,11 @@
 
 import UIKit
 import FirebaseAuth
+import GoogleSignIn
 
 enum ProviderType: String {
     case basic
+    case google
 }
 
 class HomeViewController: UIViewController {
@@ -43,6 +45,15 @@ class HomeViewController: UIViewController {
         
         title = "Inicio"
         
+        navigationItem.setHidesBackButton(true, animated: false)
+        // Guardamos los datos del usuario
+        
+        let defaults = UserDefaults.standard
+        defaults.set(email, forKey: "email")
+        defaults.set(provider.rawValue, forKey: "provider")
+        defaults.synchronize()
+        
+        
         emailLabel.text = email
         providerLabel.text = provider.rawValue
         // Do any additional setup after loading the view.
@@ -50,14 +61,30 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func closeSessionButtonAction(_ sender: Any) {
+        
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "email")
+        defaults.removeObject(forKey: "provider")
+        defaults.synchronize()
+        
         switch provider {
         case .basic:
-            do {
-                try Auth.auth().signOut()
-                navigationController?.popViewController(animated: true)
-            }catch{
-                // se ha producido un error
-            }
+            firebaseLogout()
+        case .google:
+            
+            GIDSignIn.sharedInstance()?.signOut()
+            firebaseLogout()
+
+        }
+        navigationController?.popViewController(animated: true)
+    }
+    
+    private func firebaseLogout(){
+        do {
+            try Auth.auth().signOut()
+
+        }catch{
+            // se ha producido un error
         }
     }
         
