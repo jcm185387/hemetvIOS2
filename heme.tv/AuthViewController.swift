@@ -21,6 +21,8 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var googleButton: UIButton!
     @IBOutlet weak var authStackView: UIStackView!
     
+    @IBOutlet weak var facebookButton: UIButton!
+    
     private var webView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +88,8 @@ class AuthViewController: UIViewController {
         GIDSignIn.sharedInstance()?.signIn()
     }
     
+    @IBAction func googleButtonAction(_ sender: Any) {
+    }
     private func showHome(result: AuthDataResult?, error : Error?, provider: ProviderType){
         if let result = result, error == nil{
             self.navigationController?
