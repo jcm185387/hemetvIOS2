@@ -37,7 +37,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OKI-dD-M2U">
                                 <rect key="frame" x="0.0" y="44" width="414" height="486"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inicio_hemtv" translatesAutoresizingMaskIntoConstraints="NO" id="pvB-wV-yuc">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inicio_hemtv" translatesAutoresizingMaskIntoConstraints="NO" id="pvB-wV-yuc">
                                         <rect key="frame" x="50" y="0.0" width="314" height="189"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5c-Ln-xSo">
@@ -114,7 +114,7 @@
                                                     <color key="titleShadowColor" systemColor="systemGroupedBackgroundColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="googleButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="inh-wi-Jhh"/>
+                                                    <action selector="facebookButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ebz-Na-JZB"/>
                                                 </connections>
                                             </button>
                                         </subviews>
