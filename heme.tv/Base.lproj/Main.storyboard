@@ -97,7 +97,7 @@
                                                 <rect key="frame" x="0.0" y="168" width="350" height="26.666666666666657"/>
                                                 <color key="backgroundColor" name="background"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Google" image="google">
+                                                <state key="normal" title="Google    " image="google">
                                                     <color key="titleColor" systemColor="systemGray5Color"/>
                                                     <color key="titleShadowColor" systemColor="systemGroupedBackgroundColor"/>
                                                 </state>
@@ -109,7 +109,7 @@
                                                 <rect key="frame" x="0.0" y="214.66666666666669" width="350" height="22"/>
                                                 <color key="backgroundColor" name="background"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Facebook" image="facebook">
+                                                <state key="normal" title=" Facebook" image="facebook">
                                                     <color key="titleColor" systemColor="systemGray5Color"/>
                                                     <color key="titleShadowColor" systemColor="systemGroupedBackgroundColor"/>
                                                 </state>
