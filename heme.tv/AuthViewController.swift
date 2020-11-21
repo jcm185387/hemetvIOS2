@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import WebKit
 import FirebaseAnalytics
 import FirebaseAuth
 import GoogleSignIn
@@ -24,11 +23,11 @@ class AuthViewController: UIViewController {
     
     @IBOutlet weak var facebookButton: UIButton!
     
-    private var webView: WKWebView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "HEME Televisión"
-        
+        //title = "HEME Televisión"
+        self.setNavigationBarLogo()
         // Comprobar la sesiòn del usuario autentificado
         let defaults = UserDefaults.standard
         if let email = defaults.value(forKey: "email") as? String,
@@ -120,9 +119,7 @@ class AuthViewController: UIViewController {
         }
     }
     
-    private func load(url: String){
-        webView.load(URLRequest(url: URL(string: url)!))
-    }
+
 }
 
 extension AuthViewController: GIDSignInDelegate{
@@ -134,4 +131,11 @@ extension AuthViewController: GIDSignInDelegate{
             }
         }
     }
+    func setNavigationBarLogo() {
+            let logo = UIImage(named: "splashImage.png")
+             let imageView = UIImageView(image: logo)
+            imageView.contentMode = .scaleAspectFit
+        //self.navigationItem.standardAppearance?.backgroundColor = UIColor.init(coder: # )
+             self.navigationItem.titleView = imageView
+        }
 }

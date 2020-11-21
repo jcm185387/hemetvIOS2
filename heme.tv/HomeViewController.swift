@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WebKit
 import FirebaseAuth
 import GoogleSignIn
 import FacebookLogin
@@ -17,11 +18,6 @@ enum ProviderType: String {
 }
 
 class HomeViewController: UIViewController {
-    
-    /*
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var providerLabel: UILabel!
-    @IBOutlet weak var closeSessionButton: UIButton!*/
     
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var providerLabel: UILabel!
@@ -41,6 +37,7 @@ class HomeViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("Init(coder:) has not been implemented")
     }
+    private var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +56,18 @@ class HomeViewController: UIViewController {
         emailLabel.text = email
         providerLabel.text = provider.rawValue
         // Do any additional setup after loading the view.
+        
+        //cargar heme.tv
+        /*
+        let webViewPrefs = WKPreferences()
+        webViewPrefs.javaScriptEnabled  = true
+        webViewPrefs.javaScriptCanOpenWindowsAutomatically = true
+        let webViewConf =  WKWebViewConfiguration()
+        webViewConf.preferences = webViewPrefs
+        webView = WKWebView(frame: view.frame, configuration: webViewConf)
+        webView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        view.addSubview(webView)
+        load(url: "https://www.heme.tv")*/
     }
     
     
@@ -93,6 +102,9 @@ class HomeViewController: UIViewController {
         }
     }
         
+    private func load(url: String){
+        webView.load(URLRequest(url: URL(string: url)!))
+    }
     /*
     // MARK: - Navigation
 
