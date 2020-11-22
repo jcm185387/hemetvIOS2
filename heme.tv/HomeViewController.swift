@@ -42,7 +42,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Inicio"
+        self.setNavigationBarLogo()
         
         navigationItem.setHidesBackButton(true, animated: false)
         // Guardamos los datos del usuario
@@ -58,7 +58,7 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         //cargar heme.tv
-        /*
+        
         let webViewPrefs = WKPreferences()
         webViewPrefs.javaScriptEnabled  = true
         webViewPrefs.javaScriptCanOpenWindowsAutomatically = true
@@ -68,7 +68,7 @@ class HomeViewController: UIViewController {
         webView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         view.addSubview(webView)
         load(url: "https://www.heme.tv")
-        */
+        
     }
     
     
@@ -115,5 +115,13 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+}
+extension HomeViewController {
+    func setNavigationBarLogo() {
+        let logo = UIImage(named: "splashImage.png")
+         let imageView = UIImageView(image: logo)
+        imageView.contentMode = .scaleAspectFit
+         self.navigationItem.titleView = imageView
+    }
 }
