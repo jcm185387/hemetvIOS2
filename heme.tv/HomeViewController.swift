@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import FirebaseAnalytics
 import FirebaseAuth
 import GoogleSignIn
 import FacebookLogin
@@ -39,12 +40,28 @@ class HomeViewController: UIViewController {
     }
     private var webView: WKWebView!
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setNavigationBarLogo()
         
         navigationItem.setHidesBackButton(true, animated: false)
+        
+        //Logoutcode
+        let logButton : UIBarButtonItem = UIBarButtonItem(title: "Cerrar sesión", style: UIBarButtonItem.Style.done, target: self, action: "LogOut")
+        
+        self.navigationItem.rightBarButtonItem = logButton
+        
+        //Botón de borrar mi cuenta
+        let deleteAccount : UIBarButtonItem = UIBarButtonItem ( title: "Borrar cuenta", style: .plain, target: self, action: #selector(self.deleteAccount))
+            // Cambiar esta parte para agregar un menú elegante para borrar la cuenta, en esa secciòn tambièn se agregarìa el nombre de usuario autenticado y el correo, incluso puede agregársele una foto
+            //style: UIBarButtonItem.Style.done, target: self, action: "deleteAccount")
+        
+        self.navigationItem.leftBarButtonItem = deleteAccount
+
+        
         // Guardamos los datos del usuario
         
         let defaults = UserDefaults.standard
@@ -59,6 +76,7 @@ class HomeViewController: UIViewController {
         
         //cargar heme.tv
         
+        
         let webViewPrefs = WKPreferences()
         webViewPrefs.javaScriptEnabled  = true
         webViewPrefs.javaScriptCanOpenWindowsAutomatically = true
@@ -72,6 +90,40 @@ class HomeViewController: UIViewController {
         
     }
     
+    @objc func deleteAccount(){
+        let user = Auth.auth().currentUser
+
+        user?.delete { error in
+          if let error = error {
+            // An error happened.
+          } else {
+            // Account deleted.
+            self.LogOut()
+            
+          }
+        }
+    }
+    
+    @objc func LogOut(){
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "email")
+        defaults.removeObject(forKey: "provider")
+        defaults.synchronize()
+        
+        switch provider {
+        case .basic:
+            firebaseLogout()
+        case .google:
+            
+            GIDSignIn.sharedInstance()?.signOut()
+            firebaseLogout()
+        case .facebook:
+            LoginManager().logOut()
+            firebaseLogout()
+
+        }
+        navigationController?.popViewController(animated: true)
+    }
     
     @IBAction func closeSessionButtonAction(_ sender: Any) {
         

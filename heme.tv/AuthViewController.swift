@@ -82,6 +82,7 @@ class AuthViewController: UIViewController {
     
     
     @IBAction func signUpButtonAction(_ sender: Any) {
+        
         if let  email = emailTextField.text , let password =
             passwordTextField.text {
             Auth.auth().createUser(withEmail: email, password: password) {
@@ -135,7 +136,7 @@ class AuthViewController: UIViewController {
             self.navigationController?
                 .pushViewController(HomeViewController(email: result.user.email! , provider: provider), animated: true)
         }else{
-            let alertController = UIAlertController(title: "Error", message: "Se ha producido un error de autenticaciòn mediante \(provider.rawValue)", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Error", message: "Se ha producido un error de autenticaciòn", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }
