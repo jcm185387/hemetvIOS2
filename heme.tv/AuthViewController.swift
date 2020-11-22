@@ -26,6 +26,28 @@ class AuthViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //poner radius a los txt
+        emailTextField.layer.cornerRadius = 5
+        emailTextField.layer.borderWidth = 0.2
+        
+        passwordTextField.layer.cornerRadius = 5
+        passwordTextField.layer.borderWidth = 0.2
+        
+        //poner redondéz a los botones
+        logInButton.layer.cornerRadius = 5
+        logInButton.layer.borderWidth = 0.2
+        
+        signUpButton.layer.cornerRadius = 5
+        signUpButton.layer.borderWidth = 0.2
+        
+        googleButton.layer.cornerRadius = 5
+        googleButton.layer.borderWidth = 0.2
+        
+        facebookButton.layer.cornerRadius = 5
+        facebookButton.layer.borderWidth = 0.2
+        
+        
         //title = "HEME Televisión"
         self.setNavigationBarLogo()
         // Comprobar la sesiòn del usuario autentificado

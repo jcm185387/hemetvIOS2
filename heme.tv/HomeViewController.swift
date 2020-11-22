@@ -67,7 +67,8 @@ class HomeViewController: UIViewController {
         webView = WKWebView(frame: view.frame, configuration: webViewConf)
         webView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         view.addSubview(webView)
-        load(url: "https://www.heme.tv")*/
+        load(url: "https://www.heme.tv")
+        */
     }
     
     
