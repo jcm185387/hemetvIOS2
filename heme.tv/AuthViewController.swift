@@ -136,7 +136,7 @@ class AuthViewController: UIViewController {
             self.navigationController?
                 .pushViewController(HomeViewController(email: result.user.email! , provider: provider), animated: true)
         }else{
-            let alertController = UIAlertController(title: "Error", message: "Se ha producido un error de autenticaciòn", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }

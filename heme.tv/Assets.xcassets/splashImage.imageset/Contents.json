@@ -1,21 +1,17 @@
 {
   "images" : [
     {
-      "alignment-insets" : {
-        "bottom" : 0,
-        "left" : -1,
-        "right" : 0,
-        "top" : 0
-      },
       "filename" : "inicio_hemtv.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "inicio_hemtv@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "inicio_hemtv@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

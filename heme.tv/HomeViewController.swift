@@ -50,7 +50,7 @@ class HomeViewController: UIViewController {
         navigationItem.setHidesBackButton(true, animated: false)
         
         //Logoutcode
-        let logButton : UIBarButtonItem = UIBarButtonItem(title: "Cerrar sesión", style: UIBarButtonItem.Style.done, target: self, action: "LogOut")
+        let logButton : UIBarButtonItem = UIBarButtonItem(title: "Cerrar sesión", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.LogOut))
         
         self.navigationItem.rightBarButtonItem = logButton
         
