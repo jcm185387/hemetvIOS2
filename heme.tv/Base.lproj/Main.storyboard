@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dyv-h3-fKU">
-    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -15,7 +15,7 @@
             <objects>
                 <navigationController id="dyv-h3-fKU" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m6A-QD-HHs">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -31,20 +31,20 @@
             <objects>
                 <viewController wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="AuthViewController" customModule="heme_tv" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="center" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="OKI-dD-M2U">
-                                <rect key="frame" x="0.0" y="44" width="810" height="600.5"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="600.66666666666663"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pe9-nO-Hsm">
-                                        <rect key="frame" x="225" y="0.0" width="360" height="200"/>
+                                        <rect key="frame" x="27" y="0.0" width="360" height="200"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jsM-qU-Ntg">
-                                        <rect key="frame" x="321.5" y="235" width="167.5" height="36"/>
+                                        <rect key="frame" x="123.33333333333333" y="235" width="167.33333333333337" height="36"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iniciar sesión" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5c-Ln-xSo">
-                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="167.33333333333334" height="36"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,10 +53,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uXz-o3-3Wo">
-                                        <rect key="frame" x="237" y="306" width="336.5" height="21.5"/>
+                                        <rect key="frame" x="39" y="306" width="336.33333333333331" height="21.666666666666686"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡La televisión de las nuevas generaciones!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4TG-2R-qKc">
-                                                <rect key="frame" x="0.0" y="0.0" width="336.5" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="336.33333333333331" height="21.666666666666668"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -66,7 +66,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="asO-tx-8R7">
-                                        <rect key="frame" x="230" y="362.5" width="350" height="238"/>
+                                        <rect key="frame" x="32" y="362.66666666666669" width="350" height="238.00000000000006"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tu Correo Electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tgk-fT-nVA">
                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="34"/>
@@ -81,7 +81,7 @@
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEK-VI-b9P">
-                                                <rect key="frame" x="0.0" y="108" width="350" height="30"/>
+                                                <rect key="frame" x="0.0" y="107.99999999999994" width="350" height="30"/>
                                                 <color key="backgroundColor" white="0.85063027845670103" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="KA7-k0-U6h"/>
@@ -97,7 +97,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xj4-jU-mrJ">
-                                                <rect key="frame" x="0.0" y="158" width="350" height="30"/>
+                                                <rect key="frame" x="0.0" y="157.99999999999994" width="350" height="30"/>
                                                 <color key="backgroundColor" white="0.85063027845670103" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="mD6-eI-aZ3"/>
@@ -110,7 +110,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayi-HN-Mu0">
-                                                <rect key="frame" x="0.0" y="208" width="350" height="30"/>
+                                                <rect key="frame" x="0.0" y="207.99999999999994" width="350" height="30"/>
                                                 <color key="backgroundColor" white="0.85063027845670103" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="S2q-XW-vUS"/>
@@ -125,7 +125,7 @@
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYt-Gp-Eol">
-                                                <rect key="frame" x="0.0" y="238" width="350" height="30"/>
+                                                <rect key="frame" x="0.0" y="237.99999999999994" width="350" height="30"/>
                                                 <color key="backgroundColor" white="0.85063027845670103" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="ZEk-w3-XZr"/>
