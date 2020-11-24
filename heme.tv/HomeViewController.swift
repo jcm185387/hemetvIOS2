@@ -16,6 +16,7 @@ enum ProviderType: String {
     case basic
     case google
     case facebook
+    case apple
 }
 
 class HomeViewController: UIViewController {
@@ -121,6 +122,8 @@ class HomeViewController: UIViewController {
             LoginManager().logOut()
             firebaseLogout()
 
+        case .apple:
+            firebaseLogout()
         }
         navigationController?.popViewController(animated: true)
     }
@@ -141,6 +144,8 @@ class HomeViewController: UIViewController {
             firebaseLogout()
         case .facebook:
             LoginManager().logOut()
+            firebaseLogout()
+        case .apple:
             firebaseLogout()
 
         }

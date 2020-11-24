@@ -54,6 +54,7 @@
 		705DE9FD2561F59300BCCDA9 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		952848118AA34EDD876BA9C4 /* Pods-heme.tvTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heme.tvTests.release.xcconfig"; path = "Target Support Files/Pods-heme.tvTests/Pods-heme.tvTests.release.xcconfig"; sourceTree = "<group>"; };
 		C16B6CC3820D95133E088B35 /* Pods-heme.tvTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heme.tvTests.debug.xcconfig"; path = "Target Support Files/Pods-heme.tvTests/Pods-heme.tvTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C4CF55DE256C953F007E56AE /* heme.tv.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = heme.tv.entitlements; sourceTree = "<group>"; };
 		C4F7F5B9254685FE006E9B36 /* heme.tv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heme.tv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F7F5BC254685FE006E9B36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4F7F5BE254685FE006E9B36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +152,7 @@
 		C4F7F5BB254685FE006E9B36 /* heme.tv */ = {
 			isa = PBXGroup;
 			children = (
+				C4CF55DE256C953F007E56AE /* heme.tv.entitlements */,
 				C4F7F5BC254685FE006E9B36 /* AppDelegate.swift */,
 				C4F7F5BE254685FE006E9B36 /* SceneDelegate.swift */,
 				C4F7F5C0254685FE006E9B36 /* AuthViewController.swift */,
@@ -681,6 +683,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = heme.tv/heme.tv.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PWBF3AXBF;
 				INFOPLIST_FILE = heme.tv/Info.plist;
@@ -702,6 +705,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = heme.tv/heme.tv.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2PWBF3AXBF;
 				INFOPLIST_FILE = heme.tv/Info.plist;
