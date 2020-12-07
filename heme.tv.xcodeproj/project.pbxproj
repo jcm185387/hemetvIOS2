@@ -14,6 +14,7 @@
 		705DEA002561F59300BCCDA9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 705DE9FD2561F59300BCCDA9 /* HomeViewController.xib */; };
 		ADE5E1EF0023949328B46014 /* Pods_heme_tvTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 600C6CD08CD42FCBCF199BD8 /* Pods_heme_tvTests.framework */; };
 		C4B3D822257DD6F900C666D7 /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B3D821257DD6F900C666D7 /* InicioViewController.swift */; };
+		C4B3D827257E02BD00C666D7 /* MiCuentaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B3D826257E02BD00C666D7 /* MiCuentaViewController.swift */; };
 		C4F7F5BD254685FE006E9B36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7F5BC254685FE006E9B36 /* AppDelegate.swift */; };
 		C4F7F5BF254685FE006E9B36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7F5BE254685FE006E9B36 /* SceneDelegate.swift */; };
 		C4F7F5C1254685FE006E9B36 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7F5C0254685FE006E9B36 /* AuthViewController.swift */; };
@@ -56,6 +57,7 @@
 		952848118AA34EDD876BA9C4 /* Pods-heme.tvTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heme.tvTests.release.xcconfig"; path = "Target Support Files/Pods-heme.tvTests/Pods-heme.tvTests.release.xcconfig"; sourceTree = "<group>"; };
 		C16B6CC3820D95133E088B35 /* Pods-heme.tvTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heme.tvTests.debug.xcconfig"; path = "Target Support Files/Pods-heme.tvTests/Pods-heme.tvTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4B3D821257DD6F900C666D7 /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
+		C4B3D826257E02BD00C666D7 /* MiCuentaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiCuentaViewController.swift; sourceTree = "<group>"; };
 		C4CF55DE256C953F007E56AE /* heme.tv.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = heme.tv.entitlements; sourceTree = "<group>"; };
 		C4F7F5B9254685FE006E9B36 /* heme.tv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heme.tv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F7F5BC254685FE006E9B36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				C4FDB314255BC626005C15EA /* HomeViewController.swift */,
 				705DE9FD2561F59300BCCDA9 /* HomeViewController.xib */,
 				C4B3D821257DD6F900C666D7 /* InicioViewController.swift */,
+				C4B3D826257E02BD00C666D7 /* MiCuentaViewController.swift */,
 			);
 			path = heme.tv;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 			files = (
 				C4F7F5C1254685FE006E9B36 /* AuthViewController.swift in Sources */,
 				C4F7F5BD254685FE006E9B36 /* AppDelegate.swift in Sources */,
+				C4B3D827257E02BD00C666D7 /* MiCuentaViewController.swift in Sources */,
 				C4F7F5BF254685FE006E9B36 /* SceneDelegate.swift in Sources */,
 				C4B3D822257DD6F900C666D7 /* InicioViewController.swift in Sources */,
 				C4FDB315255BC626005C15EA /* HomeViewController.swift in Sources */,
