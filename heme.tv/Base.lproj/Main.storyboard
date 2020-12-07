@@ -246,20 +246,89 @@
             </objects>
             <point key="canvasLocation" x="-1684.057971014493" y="829.89130434782612"/>
         </scene>
-        <!--View Controller-->
+        <!--Mi Cuenta View Controller-->
         <scene sceneID="Eqm-hI-LfO">
             <objects>
-                <viewController id="tSN-a6-4QJ" sceneMemberID="viewController">
+                <viewController id="tSN-a6-4QJ" customClass="MiCuentaViewController" customModule="heme_tv" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hOx-FF-uFw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="W58-7F-yjX">
+                                <rect key="frame" x="32" y="224" width="350" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnW-Ip-V09">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLC-gW-QyX">
+                                        <rect key="frame" x="0.0" y="70" width="350" height="30"/>
+                                        <color key="backgroundColor" white="0.85063027849999995" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="QvA-qj-oHq"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="aKS-T1-EYT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="     Borrar mi Cuenta">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteAccountButtonAction:" destination="tSN-a6-4QJ" eventType="touchUpInside" id="nO3-xU-Rhz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZK-6a-91H">
+                                        <rect key="frame" x="0.0" y="120" width="350" height="30"/>
+                                        <color key="backgroundColor" white="0.85063027849999995" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="P4W-Kh-O9p"/>
+                                        </constraints>
+                                        <state key="normal" title="      Cerrar Sesión">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeSessionButtonAction:" destination="tSN-a6-4QJ" eventType="touchUpInside" id="eVy-ix-or3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="rXC-U8-b38"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="VZf-fQ-19B"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="CPT-f1-u0G"/>
+                    <connections>
+                        <outlet property="closeSessionButton" destination="wZK-6a-91H" id="eUn-UI-ETv"/>
+                        <outlet property="deleteaccountButton" destination="cLC-gW-QyX" id="f9e-nf-KII"/>
+                        <outlet property="emailLabel" destination="hnW-Ip-V09" id="GXU-cw-68x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6jK-ZD-DjS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1684" y="1509"/>
+            <point key="canvasLocation" x="-776.81159420289862" y="1508.967391304348"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PHt-qv-FTt">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gds-aY-jxN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W8B-0Y-NL6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="O01-UU-1Vo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tSN-a6-4QJ" kind="relationship" relationship="rootViewController" id="KuT-Jq-O3K"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-1684.057971014493" y="1508.967391304348"/>
         </scene>
     </scenes>
     <resources>

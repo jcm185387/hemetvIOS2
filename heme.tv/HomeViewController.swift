@@ -22,8 +22,11 @@ enum ProviderType: String {
 class HomeViewController: UIViewController {
     
     
+    //@IBOutlet weak var emailLabel: UILabel!
+    //@IBOutlet weak var providerLabel: UILabel!
+    
+    
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var providerLabel: UILabel!
     @IBOutlet weak var closeSessionButton: UIButton!
     
     
@@ -60,19 +63,6 @@ class HomeViewController: UIViewController {
         
         navigationItem.setHidesBackButton(true, animated: false)
         
-        //Logoutcode
-        let logButton : UIBarButtonItem = UIBarButtonItem(title: "Cerrar sesión", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.LogOut))
-        
-        self.navigationItem.rightBarButtonItem = logButton
-        
-        //Botón de borrar mi cuenta
-        let deleteAccount : UIBarButtonItem = UIBarButtonItem ( title: "Borrar cuenta", style: .plain, target: self, action: #selector(self.deleteAccount))
-            // Cambiar esta parte para agregar un menú elegante para borrar la cuenta, en esa secciòn tambièn se agregarìa el nombre de usuario autenticado y el correo, incluso puede agregársele una foto
-            //style: UIBarButtonItem.Style.done, target: self, action: "deleteAccount")
-        
-        self.navigationItem.leftBarButtonItem = deleteAccount
-
-        
         // Guardamos los datos del usuario
         
         
@@ -84,25 +74,41 @@ class HomeViewController: UIViewController {
         
         
         emailLabel.text = email
-        providerLabel.text = provider.rawValue
+        //providerLabel.text = provider.rawValue
         
          
         // Do any additional setup after loading the view.
-        
-        //cargar heme.tv
-        
-        
-        let webViewPrefs = WKPreferences()
-        webViewPrefs.javaScriptEnabled  = true
-        webViewPrefs.javaScriptCanOpenWindowsAutomatically = true
-        let webViewConf =  WKWebViewConfiguration()
-        webViewConf.preferences = webViewPrefs
-        webView = WKWebView(frame: view.frame, configuration: webViewConf)
-        webView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-        view.addSubview(webView)
-        load(url: "https://heme.tv/")
+        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+        button.backgroundColor = .green
+        button.setTitle("Test Button", for: .normal)
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+
+        self.view.addSubview(button)
         
         
+    }
+    
+    @objc func buttonAction(sender: UIButton!) {
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "email")
+        defaults.removeObject(forKey: "provider")
+        defaults.synchronize()
+        
+        switch provider {
+        case .basic:
+            firebaseLogout()
+        case .google:
+            
+            GIDSignIn.sharedInstance()?.signOut()
+            firebaseLogout()
+        case .facebook:
+            LoginManager().logOut()
+            firebaseLogout()
+        case .apple:
+            firebaseLogout()
+
+        }
+        navigationController?.popViewController(animated: true)
     }
     
     @objc func deleteAccount(){
@@ -142,8 +148,23 @@ class HomeViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    
+    @IBAction func deleteAccountButtonAction(_ sender: Any) {
+        let user = Auth.auth().currentUser
+
+        user?.delete { error in
+          if let error = error {
+            // An error happened.
+          } else {
+            // Account deleted.
+            self.LogOut()
+            
+          }
+        }
+    }
+    
+    
     @IBAction func closeSessionButtonAction(_ sender: Any) {
-        
         let defaults = UserDefaults.standard
         defaults.removeObject(forKey: "email")
         defaults.removeObject(forKey: "provider")

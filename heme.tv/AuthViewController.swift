@@ -66,16 +66,6 @@ class AuthViewController: UIViewController {
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.delegate = self
         
-        /*
-        let webViewPrefs = WKPreferences()
-        webViewPrefs.javaScriptEnabled  = true
-        webViewPrefs.javaScriptCanOpenWindowsAutomatically = true
-        let webViewConf =  WKWebViewConfiguration()
-        webViewConf.preferences = webViewPrefs
-        webView = WKWebView(frame: view.frame, configuration: webViewConf)
-        webView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-        view.addSubview(webView)
-        load(url: "https://www.heme.tv")*/
     }
     
     override func viewWillAppear(_ animated: Bool) {
