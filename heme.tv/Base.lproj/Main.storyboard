@@ -19,12 +19,28 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Kh2-6c-kym"/>
+                        <segue destination="IYZ-r2-Y7O" kind="relationship" relationship="rootViewController" id="NpV-B0-1V8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="163-Oc-LL6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="61" y="-86"/>
+        </scene>
+        <!--Inicio View Controller-->
+        <scene sceneID="OsZ-gQ-hd8">
+            <objects>
+                <viewController id="IYZ-r2-Y7O" customClass="InicioViewController" customModule="heme_tv" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ebd-b6-WAS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wvB-vJ-2q2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YTV-f0-fYU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ci8-Wl-R6D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="781" y="-86"/>
         </scene>
         <!--Auth View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -81,7 +97,7 @@
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEK-VI-b9P">
-                                                <rect key="frame" x="0.0" y="107.99999999999994" width="350" height="30"/>
+                                                <rect key="frame" x="0.0" y="108" width="350" height="30"/>
                                                 <color key="backgroundColor" white="0.85063027845670103" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="KA7-k0-U6h"/>
@@ -190,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988" y="-86"/>
+            <point key="canvasLocation" x="1483" y="-86"/>
         </scene>
     </scenes>
     <resources>
@@ -200,6 +216,9 @@
         <namedColor name="background">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -21,24 +21,34 @@ enum ProviderType: String {
 
 class HomeViewController: UIViewController {
     
+    
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var providerLabel: UILabel!
     @IBOutlet weak var closeSessionButton: UIButton!
     
+    
     private let email: String
+    
+     
     private let provider: ProviderType
     
     
+    
     init(email: String, provider: ProviderType){
+    //init(provider: ProviderType){
         self.email = email
         self.provider = provider
         super.init(nibName: nil, bundle: nil)
         
     }
     
+    
+    
     required init?(coder: NSCoder) {
         fatalError("Init(coder:) has not been implemented")
+       // super.init(coder:coder)
     }
+    
     private var webView: WKWebView!
     
 
@@ -65,14 +75,18 @@ class HomeViewController: UIViewController {
         
         // Guardamos los datos del usuario
         
+        
         let defaults = UserDefaults.standard
         defaults.set(email, forKey: "email")
         defaults.set(provider.rawValue, forKey: "provider")
         defaults.synchronize()
         
         
+        
         emailLabel.text = email
         providerLabel.text = provider.rawValue
+        
+         
         // Do any additional setup after loading the view.
         
         //cargar heme.tv

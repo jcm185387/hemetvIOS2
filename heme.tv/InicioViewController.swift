@@ -7,30 +7,24 @@
 
 import UIKit
 import WebKit
-import FirebaseAnalytics
 import FirebaseAuth
-import GoogleSignIn
-import FacebookLogin
 
-
-enum ProviderType: String {
-    case basic
-    case google
-    case facebook
-    case apple
-}
 
 class InicioViewController: UIViewController {
     
-    private let provider: ProviderType
+    private var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setNavigationBarLogo()
-
         // Do any additional setup after loading the view.
         
+        navigationItem.setHidesBackButton(true, animated: false)
+        
         //Logoutcode
+        
+        //1.- COMENTAREMOS ESTA SECCIÓN Y AGREGAREMOS UN MENÚ ELEGANTE PARA AGREGAR EL LINK AL LOGIN
+        /*
         let logButton : UIBarButtonItem = UIBarButtonItem(title: "Cerrar sesión", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.LogOut))
         
         self.navigationItem.rightBarButtonItem = logButton
@@ -41,9 +35,43 @@ class InicioViewController: UIViewController {
             //style: UIBarButtonItem.Style.done, target: self, action: "deleteAccount")
         
         self.navigationItem.leftBarButtonItem = deleteAccount
-
+         */
+        /*TERMINA LA COMENTADA */
+        
+        // SECCIÓN QUE CARGA EL WEBVIEW
+        let webViewPrefs = WKPreferences()
+        webViewPrefs.javaScriptEnabled  = true
+        webViewPrefs.javaScriptCanOpenWindowsAutomatically = true
+        let webViewConf =  WKWebViewConfiguration()
+        webViewConf.preferences = webViewPrefs
+        webView = WKWebView(frame: view.frame, configuration: webViewConf)
+        webView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        view.addSubview(webView)
+        load(url: "https://heme.tv/")
+        
     }
+    
+    private func load(url: String){
+        webView.load(URLRequest(url: URL(string: url)!))
+    }
+    
+    @objc func deleteAccount(){
+        let user = Auth.auth().currentUser
+
+        user?.delete { error in
+          if let error = error {
+            // An error happened.
+          } else {
+            // Account deleted.
+            self.LogOut()
+            
+          }
+        }
+    }
+    
     @objc func LogOut(){
+        
+        /*
         let defaults = UserDefaults.standard
         defaults.removeObject(forKey: "email")
         defaults.removeObject(forKey: "provider")
@@ -63,17 +91,10 @@ class InicioViewController: UIViewController {
         case .apple:
             firebaseLogout()
         }
-        navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)*/
     }
     
-    private func firebaseLogout(){
-        do {
-            try Auth.auth().signOut()
 
-        }catch{
-            // se ha producido un error
-        }
-    }
     /*
     // MARK: - Navigation
 
@@ -85,7 +106,6 @@ class InicioViewController: UIViewController {
     */
 
 }
-
 extension InicioViewController {
     func setNavigationBarLogo() {
         let logo = UIImage(named: "splashImage.png")
