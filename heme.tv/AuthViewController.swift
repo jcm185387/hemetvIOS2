@@ -59,7 +59,7 @@ class AuthViewController: UIViewController {
         if let email = defaults.value(forKey: "email") as? String,
            let provider = defaults.value(forKey: "provider") as? String {
             authStackView.isHidden = true
-            navigationController?.pushViewController(HomeViewController(email: email, provider: ProviderType.init(rawValue: provider)!), animated: false)
+            navigationController?.pushViewController(MyHomeViewController(email: email, provider: ProviderType.init(rawValue: provider)!), animated: false)
         }
         
         //google auth
@@ -146,7 +146,7 @@ class AuthViewController: UIViewController {
     private func showHome(result: AuthDataResult?, error : Error?, provider: ProviderType){
         if let result = result, error == nil{
             self.navigationController?
-                .pushViewController(HomeViewController(email: result.user.email! , provider: provider), animated: true)
+                .pushViewController(MyHomeViewController(email: result.user.email! , provider: provider), animated: true)
         }else{
             let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))

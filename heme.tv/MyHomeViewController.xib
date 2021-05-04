@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyHomeViewController">
+            <connections>
+                <outlet property="closeSessionButton" destination="chg-0v-jj1" id="3Vp-tN-g9i"/>
+                <outlet property="deleteAccountButton" destination="Cg6-qJ-K9f" id="J0v-Eq-PF5"/>
+                <outlet property="emailLabel" destination="RNX-4d-H1Z" id="skP-uk-WqH"/>
+                <outlet property="view" destination="iN0-l3-epB" id="uRg-uv-3M6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="x2R-h9-OJ1">
+                    <rect key="frame" x="16" y="60" width="382" height="502"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4Ct-Mi-iff">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="247"/>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ryc-2x-vWB">
+                            <rect key="frame" x="0.0" y="255" width="382" height="247"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDb-Tc-E52">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="43"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="X52-rd-Tjn"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNX-4d-H1Z">
+                                    <rect key="frame" x="0.0" y="51" width="382" height="43"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="gv0-xq-bcT"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esperamos que disfrutes tu estancia aquí." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cm-zW-bbY">
+                                    <rect key="frame" x="0.0" y="102" width="382" height="43"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="scq-KQ-00d"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chg-0v-jj1">
+                                    <rect key="frame" x="0.0" y="153" width="382" height="43"/>
+                                    <color key="backgroundColor" red="0.87564766839378239" green="0.87564766839378239" blue="0.87564766839378239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="5pa-lL-6hM"/>
+                                        <constraint firstAttribute="height" constant="40" id="Y8b-HL-pdD"/>
+                                    </constraints>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <state key="normal" title="Cerrar Sesión"/>
+                                    <connections>
+                                        <action selector="closeSessionButtonAction:" destination="-1" eventType="touchUpInside" id="thd-o4-Lvx"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cg6-qJ-K9f">
+                                    <rect key="frame" x="0.0" y="204" width="382" height="43"/>
+                                    <color key="backgroundColor" red="0.87564766839378239" green="0.87564766839378239" blue="0.87564766839378239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="6Ao-GV-kAQ"/>
+                                    </constraints>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <state key="normal" title="Borrar mi cuenta"/>
+                                    <connections>
+                                        <action selector="deleteAccountButtonAction:" destination="-1" eventType="touchUpInside" id="JNY-vT-FvE"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="760-Gh-83x"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="400" id="0MW-Y5-sWg"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="1uU-2j-U1D"/>
+                        <constraint firstAttribute="width" constant="110" id="871-74-EYm"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="DAa-LN-UL2"/>
+                        <constraint firstAttribute="height" constant="200" id="bej-Wj-ULW"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="maw-AH-qsp"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="zha-CI-OoV"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="x2R-h9-OJ1" secondAttribute="bottom" constant="300" id="Dwe-BT-6V2"/>
+                <constraint firstItem="x2R-h9-OJ1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="L61-xR-sbW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="x2R-h9-OJ1" secondAttribute="trailing" constant="16" id="LvD-hz-Lfa"/>
+                <constraint firstItem="x2R-h9-OJ1" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="WfQ-Sg-FBw"/>
+            </constraints>
+            <point key="canvasLocation" x="-191.30434782608697" y="71.651785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

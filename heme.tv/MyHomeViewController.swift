@@ -1,10 +1,10 @@
 //
-//  HomeViewController.swift
+//  MyHomeViewController.swift
 //  heme.tv
 //
-//  Created by Alvaro Hernandez Melo on 11/11/20.
+//  Created by Aurora Nataly Hernández Melo on 03/05/21.
 //
-/*
+import Foundation
 import UIKit
 import WebKit
 import FirebaseAnalytics
@@ -19,17 +19,21 @@ enum ProviderType: String {
     case apple
 }
 
-class HomeViewController: UIViewController {
+class MyHomeViewController: UIViewController {
     
     
     //@IBOutlet weak var emailLabel: UILabel!
     //@IBOutlet weak var providerLabel: UILabel!
     
     
+    //@IBOutlet weak var emailLabel: UILabel!
+    
     @IBOutlet weak var emailLabel: UILabel!
+    //@IBOutlet weak var closeSessionButton: UIButton!
+    
     @IBOutlet weak var closeSessionButton: UIButton!
     
-    
+    @IBOutlet weak var deleteAccountButton: UIButton!
     private let email: String
     
      
@@ -64,7 +68,11 @@ class HomeViewController: UIViewController {
         navigationItem.setHidesBackButton(true, animated: false)
         
         // Guardamos los datos del usuario
+        closeSessionButton.layer.cornerRadius = 5
+        closeSessionButton.layer.borderWidth = 0.2
         
+        deleteAccountButton.layer.cornerRadius = 5
+        deleteAccountButton.layer.borderWidth = 0.2
         
         let defaults = UserDefaults.standard
         defaults.set(email, forKey: "email")
@@ -78,12 +86,14 @@ class HomeViewController: UIViewController {
         
          
         // Do any additional setup after loading the view.
+        /*
         let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
         button.backgroundColor = .green
         button.setTitle("Test Button", for: .normal)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
 
         self.view.addSubview(button)
+        */
         
         
     }
@@ -160,9 +170,21 @@ class HomeViewController: UIViewController {
             self.LogOut()
             
           }
+        }    }
+    /*
+    @IBAction func deleteAccountButtonAction(_ sender: Any) {
+        let user = Auth.auth().currentUser
+
+        user?.delete { error in
+          if let error = error {
+            // An error happened.
+          } else {
+            // Account deleted.
+            self.LogOut()
+            
+          }
         }
-    }
-    
+    }*/
     
     @IBAction func closeSessionButtonAction(_ sender: Any) {
         let defaults = UserDefaults.standard
@@ -186,6 +208,30 @@ class HomeViewController: UIViewController {
         }
         navigationController?.popViewController(animated: true)
     }
+    /*
+    @IBAction func closeSessionButtonAction(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "email")
+        defaults.removeObject(forKey: "provider")
+        defaults.synchronize()
+        
+        switch provider {
+        case .basic:
+            firebaseLogout()
+        case .google:
+            
+            GIDSignIn.sharedInstance()?.signOut()
+            firebaseLogout()
+        case .facebook:
+            LoginManager().logOut()
+            firebaseLogout()
+        case .apple:
+            firebaseLogout()
+
+        }
+        navigationController?.popViewController(animated: true)
+    }
+ */
     
     private func firebaseLogout(){
         do {
@@ -210,7 +256,7 @@ class HomeViewController: UIViewController {
     */
     
 }
-extension HomeViewController {
+extension MyHomeViewController {
     func setNavigationBarLogo() {
         let logo = UIImage(named: "splashImage.png")
          let imageView = UIImageView(image: logo)
@@ -218,4 +264,4 @@ extension HomeViewController {
          self.navigationItem.titleView = imageView
     }
 }
-*/
+

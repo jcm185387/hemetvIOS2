@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="heme_tv" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
             <connections>
                 <outlet property="emailLabel" destination="UEK-xi-8gx" id="fgb-Lp-sr2"/>
-                <outlet property="view" destination="iN0-l3-epB" id="djy-ev-wZs"/>
+                <outlet property="view" destination="iN0-l3-epB" id="36V-hs-edE"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -29,7 +29,7 @@
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="422-Mi-U3j">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="422-Mi-U3j" userLabel="Borrar mi Cuenta">
                             <rect key="frame" x="0.0" y="70" width="350" height="30"/>
                             <color key="backgroundColor" white="0.85063027849999995" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -70,7 +70,7 @@
                 <constraint firstItem="SZJ-cq-h1F" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="h0R-gI-CbC"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SZJ-cq-h1F" secondAttribute="bottom" constant="200" id="lcT-Y2-FLH"/>
             </constraints>
-            <point key="canvasLocation" x="133" y="116"/>
+            <point key="canvasLocation" x="601" y="263"/>
         </view>
     </objects>
     <resources>

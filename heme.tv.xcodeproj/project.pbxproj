@@ -12,6 +12,8 @@
 		705DE9FE2561F59300BCCDA9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 705DE9FD2561F59300BCCDA9 /* HomeViewController.xib */; };
 		705DE9FF2561F59300BCCDA9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 705DE9FD2561F59300BCCDA9 /* HomeViewController.xib */; };
 		705DEA002561F59300BCCDA9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 705DE9FD2561F59300BCCDA9 /* HomeViewController.xib */; };
+		8051DB5D2640B7BE00A03E2D /* MyHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8051DB5C2640B7BE00A03E2D /* MyHomeViewController.xib */; };
+		8051DB622640C41300A03E2D /* MyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8051DB612640C41300A03E2D /* MyHomeViewController.swift */; };
 		ADE5E1EF0023949328B46014 /* Pods_heme_tvTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 600C6CD08CD42FCBCF199BD8 /* Pods_heme_tvTests.framework */; };
 		C4B3D822257DD6F900C666D7 /* InicioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B3D821257DD6F900C666D7 /* InicioViewController.swift */; };
 		C4B3D827257E02BD00C666D7 /* MiCuentaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B3D826257E02BD00C666D7 /* MiCuentaViewController.swift */; };
@@ -54,6 +56,8 @@
 		600C6CD08CD42FCBCF199BD8 /* Pods_heme_tvTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heme_tvTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		667176C649DC12F8E9411745 /* Pods-heme.tv.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heme.tv.release.xcconfig"; path = "Target Support Files/Pods-heme.tv/Pods-heme.tv.release.xcconfig"; sourceTree = "<group>"; };
 		705DE9FD2561F59300BCCDA9 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		8051DB5C2640B7BE00A03E2D /* MyHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyHomeViewController.xib; sourceTree = "<group>"; };
+		8051DB612640C41300A03E2D /* MyHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHomeViewController.swift; sourceTree = "<group>"; };
 		952848118AA34EDD876BA9C4 /* Pods-heme.tvTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heme.tvTests.release.xcconfig"; path = "Target Support Files/Pods-heme.tvTests/Pods-heme.tvTests.release.xcconfig"; sourceTree = "<group>"; };
 		C16B6CC3820D95133E088B35 /* Pods-heme.tvTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heme.tvTests.debug.xcconfig"; path = "Target Support Files/Pods-heme.tvTests/Pods-heme.tvTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4B3D821257DD6F900C666D7 /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 				705DE9FD2561F59300BCCDA9 /* HomeViewController.xib */,
 				C4B3D821257DD6F900C666D7 /* InicioViewController.swift */,
 				C4B3D826257E02BD00C666D7 /* MiCuentaViewController.swift */,
+				8051DB5C2640B7BE00A03E2D /* MyHomeViewController.xib */,
+				8051DB612640C41300A03E2D /* MyHomeViewController.swift */,
 			);
 			path = heme.tv;
 			sourceTree = "<group>";
@@ -308,6 +314,7 @@
 				705DE9FE2561F59300BCCDA9 /* HomeViewController.xib in Resources */,
 				C4F7F5C4254685FE006E9B36 /* Main.storyboard in Resources */,
 				C4FDB2F2255BA927005C15EA /* GoogleService-Info.plist in Resources */,
+				8051DB5D2640B7BE00A03E2D /* MyHomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +520,7 @@
 				C4F7F5BF254685FE006E9B36 /* SceneDelegate.swift in Sources */,
 				C4B3D822257DD6F900C666D7 /* InicioViewController.swift in Sources */,
 				C4FDB315255BC626005C15EA /* HomeViewController.swift in Sources */,
+				8051DB622640C41300A03E2D /* MyHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

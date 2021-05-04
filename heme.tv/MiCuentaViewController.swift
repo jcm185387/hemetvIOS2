@@ -26,7 +26,7 @@ class MiCuentaViewController: UIViewController {
     
     @IBOutlet weak var emailLabel: UILabel!
     //@IBOutlet weak var emailLabel: UITextField!
-    @IBOutlet weak var deleteaccountButton: UIButton!
+    @IBOutlet weak var deleteAccountButton: UIButton!
     @IBOutlet weak var closeSessionButton: UIButton!
     
     
